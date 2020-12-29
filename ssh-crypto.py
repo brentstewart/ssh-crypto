@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 
 user="User"
 ip="IP"
@@ -18,7 +19,11 @@ algo="undefined"
 host="undefined"
 cipher="undefined"
 
-file=open("ssh.txt","r")
+try:
+    file=open(sys.argv[1],"r")
+except:
+    print("File not found.")
+    sys.exit()
 for line in file:
     if(line.find("debug1: kex")>0):
         list=line.split()
