@@ -8,7 +8,9 @@ When run, it parses afile called _ssh.txt_.  First, edit /etc/ssh/sshd_config.  
 > SyslogFacility AUTH  
 > LogLevel DEBUG1  
 
-Prepare the file by running:
+Restart the SSH service for the new logging setting to take effect.
+
+This program analyzes a text file.  Prepare the file by running:
 > journalctl -u ssh > ~/ssh.txt
 
 This pulls all logging for the ssh unit into a text file.  __ssh-crypto__ then reviews the file and outputs a table of logins and crypto used.
