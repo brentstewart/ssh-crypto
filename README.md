@@ -9,8 +9,9 @@ When run, it parses afile called _ssh.txt_.  First, edit /etc/ssh/sshd_config.  
 > LogLevel DEBUG1  
 
 Restart the SSH service for the new logging setting to take effect.
+> sudo service sshd restart
 
-This program analyzes a text file.  Prepare the file by running:
+This program analyzes a text file.  Keep in mind that the crypto fields won't be populated for logins before the loggin change takes effect.  Prepare the file by running:
 > journalctl -u ssh > ~/ssh.txt
 
 This pulls all logging for the ssh unit into a text file.  __ssh-crypto__ then reviews the file and outputs a table of logins and crypto used.
