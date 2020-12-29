@@ -1,8 +1,8 @@
 # ssh-crypto
 
-__ssh-crypto__ is a Python3 program to read ssh debugging and identify who has logged in and what settings were used.
+__ssh-crypto__ is a Python3 program to read ssh debugging and identify who has logged in and what settings were used.  It expects a file name, which is a text file that contains ssh logging output.
 
-When run, it parses afile called _ssh.txt_.  First, edit /etc/ssh/sshd_config.  Change the logging section as shown below (these are commented out by default).  Note that SSH supports different levels of logging, all the way up to DEBUG3.  The lines we need are all DEBUG1.
+When run, it parses a log file.  First, edit /etc/ssh/sshd_config.  Change the logging section as shown below (these are commented out by default).  Note that SSH supports different levels of logging, all the way up to DEBUG3.  The lines we need are all DEBUG1.
 
 > \# Logging  
 > SyslogFacility AUTH  
@@ -23,7 +23,7 @@ This pulls all logging for the ssh unit into a text file.  __ssh-crypto__ then r
 * Prepped file
 
 ## Usage
-     pop  pop-os  ~  $  ~/git/ssh-crypto/ssh-crypto.py
+     pop  pop-os  ~  $  ~/git/ssh-crypto/ssh-crypto.py ~/ssh.txt
     -------------------------------------------------------------------------------------------------------------------
     | # |       User        |       IP       |     Algorithm      |        Host        |            Cipher            |
     -------------------------------------------------------------------------------------------------------------------
