@@ -35,3 +35,5 @@ This pulls all logging for the ssh unit into a text file.  __ssh-crypto__ then r
     |  5|pop                |192.168.25.81   |curve25519-sha256   |ecdsa-sha2-nistp256 |chacha20-poly1305@openssh.com |
     |  6|pop                |192.168.25.81   |curve25519-sha256   |ecdsa-sha2-nistp256 |chacha20-poly1305@openssh.com |
     -------------------------------------------------------------------------------------------------------------------
+
+    Read more about this utility on my blog at https://www.nextpertise.net/ssh-crypto/.
